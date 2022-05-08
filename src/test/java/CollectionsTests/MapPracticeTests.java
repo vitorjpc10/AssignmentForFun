@@ -15,7 +15,7 @@ public class MapPracticeTests {
     private Map map1;
 
     @Before
-    public void setup(){
+    public void setup() {
         mapPractice = new MapPractice();
         map1 = new TreeMap<String, String>();
         map1.put("Mario", "Mario Bros.");
@@ -33,51 +33,54 @@ public class MapPracticeTests {
     }
 
     @Test
-    public void findValueOfTest1(){
+    public void findValueOfTest1() {
         // Given
         String key = "Captain Falcon";
         // When
         String expected = "F-Zero";
         String actual = (String) mapPractice.findValueOf(map1, key);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void findValueOfTest2(){
+    public void findValueOfTest2() {
         // Given
         String key = "Pikachu";
         // When
         String expected = "Pokemon";
         String actual = (String) mapPractice.findValueOf(map1, key);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void findValueOfTest3(){
+    public void findValueOfTest3() {
         // Given
         String key = "Snake";
         // When
         String expected = null;
         String actual = (String) mapPractice.findValueOf(map1, key);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void findKeysOfTest1(){
+    public void findKeysOfTest1() {
         // Given
         String value = "Donkey Kong";
         // When
-        Object[] expected = {"Donkey Kong"};
+        Object[] expected = { "Donkey Kong" };
         Object[] actual = mapPractice.findKeysOf(map1, value);
         // Then
         Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void findKeysOfTest2(){
+    public void findKeysOfTest2() {
         // Given
         String value = "Devil May Cry";
         // When
@@ -88,18 +91,18 @@ public class MapPracticeTests {
     }
 
     @Test
-    public void findKeysOfTest3(){
+    public void findKeysOfTest3() {
         // Given
         String value = "Pokemon";
         // When
-        Object[] expected = {"Jigglypuff", "Pikachu"};
+        Object[] expected = { "Jigglypuff", "Pikachu" };
         Object[] actual = mapPractice.findKeysOf(map1, value);
         // Then
         Assert.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void fibonacciTreeTest1(){
+    public void fibonacciTreeTest1() {
         // Given
         Integer upTo = 10;
         // When
@@ -116,11 +119,12 @@ public class MapPracticeTests {
         expected.put(10, 55);
         Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void fibonacciTreeTest2(){
+    public void fibonacciTreeTest2() {
         // Given
         Integer upTo = 5;
         // When
@@ -132,11 +136,13 @@ public class MapPracticeTests {
         expected.put(5, 5);
         Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
+
     }
 
     @Test
-    public void fibonacciTreeTest3(){
+    public void fibonacciTreeTest3() {
         // Given
         Integer upTo = 2;
         // When
@@ -145,11 +151,12 @@ public class MapPracticeTests {
         expected.put(2, 1);
         Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void fibonacciTreeTest4(){
+    public void fibonacciTreeTest4() {
         // Given
         Integer upTo = 1;
         // When
@@ -157,22 +164,24 @@ public class MapPracticeTests {
         expected.put(1, 1);
         Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void fibonacciTreeTest5(){
+    public void fibonacciTreeTest5() {
         // Given
         Integer upTo = 0;
         // When
         Map<Integer, Integer> expected = new TreeMap<Integer, Integer>();
         Map<Integer, Integer> actual = mapPractice.fibonacciTree(upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void crazySpiralTest1(){
+    public void crazySpiralTest1() {
         // Given
         Integer upTo = 10;
         Integer first = 2;
@@ -191,11 +200,12 @@ public class MapPracticeTests {
         expected.put(10, 110);
         Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void crazySpiralTest2(){
+    public void crazySpiralTest2() {
         // Given
         Integer upTo = 8;
         Integer first = 5;
@@ -212,11 +222,12 @@ public class MapPracticeTests {
         expected.put(8, 66);
         Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void crazySpiralTest3(){
+    public void crazySpiralTest3() {
         // Given
         Integer upTo = 12;
         Integer first = 3;
@@ -237,11 +248,12 @@ public class MapPracticeTests {
         expected.put(12, -191);
         Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void crazySpiralTest4(){
+    public void crazySpiralTest4() {
         // Given
         Integer upTo = 1;
         Integer first = 56;
@@ -251,11 +263,12 @@ public class MapPracticeTests {
         expected.put(1, 56);
         Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void crazySpiralTest5(){
+    public void crazySpiralTest5() {
         // Given
         Integer upTo = 0;
         Integer first = 334124535;
@@ -264,9 +277,35 @@ public class MapPracticeTests {
         Map<Integer, Integer> expected = new TreeMap<Integer, Integer>();
         Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
+    public static void main(String[] args) {
 
+        MapPracticeTests obj = new MapPracticeTests();
+        obj.setup();
+
+        obj.findValueOfTest1();
+        obj.findValueOfTest2();
+        obj.findValueOfTest3();
+
+        obj.findKeysOfTest1();
+        obj.findKeysOfTest2();
+        obj.findKeysOfTest3();
+
+        obj.fibonacciTreeTest1();
+        obj.fibonacciTreeTest2();
+        obj.fibonacciTreeTest3();
+        obj.fibonacciTreeTest4();
+        obj.fibonacciTreeTest5();
+
+        obj.crazySpiralTest1();
+        obj.crazySpiralTest2();
+        obj.crazySpiralTest3();
+        obj.crazySpiralTest4();
+        obj.crazySpiralTest5();
+
+    }
 
 }

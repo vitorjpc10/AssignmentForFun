@@ -1,0 +1,10 @@
+Here is link for the assignments. You can use IDEA to work with it. https://github.com/YangsWorkShop/AssignmentForFun
+GitHubGitHub
+GitHub - YangsWorkShop/AssignmentForFun
+Contribute to YangsWorkShop/AssignmentForFun development by creating an account on GitHub. (41 kB)
+https://github.com/YangsWorkShop/AssignmentForFun
+
+12:01
+3 after you finished the assignment, please overwrite the test cases .
+12:02
+please change it to Cohort 9.0

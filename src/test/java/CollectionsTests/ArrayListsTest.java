@@ -13,12 +13,12 @@ public class ArrayListsTest {
     private ArrayLists arrayLists;
 
     @Before
-    public void setup(){
+    public void setup() {
         arrayLists = new ArrayLists();
     }
 
     @Test
-    public void addShitTest1(){
+    public void addShitTest1() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         original1.add(5);
@@ -32,11 +32,12 @@ public class ArrayListsTest {
         original1.add(7);
         original1.add(7);
         // Then
+        System.out.println("expected: " + original1.toString() + " actual: " + actual);
         Assert.assertEquals(original1, actual);
     }
 
     @Test
-    public void addShitTest2(){
+    public void addShitTest2() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         original1.add(5);
@@ -46,22 +47,24 @@ public class ArrayListsTest {
         // When
         ArrayList<Integer> actual = arrayLists.addShit(original1, original2);
         // Then
+        System.out.println("expected: " + original1.toString() + " actual: " + actual);
         Assert.assertEquals(original1, actual);
     }
 
     @Test
-    public void addShitTest3(){
+    public void addShitTest3() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         ArrayList<Integer> original2 = new ArrayList<Integer>();
         // When
         ArrayList<Integer> actual = arrayLists.addShit(original1, original2);
         // Then
+        System.out.println("expected: " + original1.toString() + " actual: " + actual);
         Assert.assertEquals(original1, actual);
     }
 
     @Test
-    public void addShitTogetherTest1(){
+    public void addShitTogetherTest1() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         original1.add(5);
@@ -74,11 +77,12 @@ public class ArrayListsTest {
         Integer actual = arrayLists.addShitTogether(original1, original2);
         Integer expected = 29;
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void addShitTogetherTest2(){
+    public void addShitTogetherTest2() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         ArrayList<Integer> original2 = new ArrayList<Integer>();
@@ -88,11 +92,12 @@ public class ArrayListsTest {
         Integer actual = arrayLists.addShitTogether(original1, original2);
         Integer expected = 14;
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void addShitTogetherTest3(){
+    public void addShitTogetherTest3() {
         // Given
         ArrayList<Integer> original1 = new ArrayList<Integer>();
         ArrayList<Integer> original2 = new ArrayList<Integer>();
@@ -100,11 +105,12 @@ public class ArrayListsTest {
         Integer actual = arrayLists.addShitTogether(original1, original2);
         Integer expected = 0;
         // Then
+        System.out.println("expected: " + expected + " actual: " + actual);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void removeAllTest1(){
+    public void removeAllTest1() {
         // Given
         ArrayList<Integer> original = new ArrayList<Integer>();
         original.add(5);
@@ -115,15 +121,18 @@ public class ArrayListsTest {
         // When
         Integer toRemove = 5;
         ArrayList<Integer> actual = arrayLists.removeAll(original, toRemove);
+        // System.out.println("1: " + original.toString());
         original.remove(0);
+        // System.out.println("2: " + original.toString());
         original.remove(0);
-        original.remove(0);
+        // System.out.println("3: " + original.toString());
+        System.out.println("expected: " + original.toString() + " actual: " + actual.toString());
         // Then
         Assert.assertEquals(original, actual);
     }
 
     @Test
-    public void removeAllTest2(){
+    public void removeAllTest2() {
         // Given
         ArrayList<Integer> original = new ArrayList<Integer>();
         original.add(5);
@@ -137,11 +146,12 @@ public class ArrayListsTest {
         original.remove(0);
         original.remove(1);
         // Then
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         Assert.assertEquals(original, actual);
     }
 
     @Test
-    public void removeAllTest3(){
+    public void removeAllTest3() {
         // Given
         ArrayList<Integer> original = new ArrayList<Integer>();
         original.add(5);
@@ -153,11 +163,12 @@ public class ArrayListsTest {
         Integer toRemove = null;
         ArrayList<Integer> actual = arrayLists.removeAll(original, toRemove);
         // Then
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         Assert.assertEquals(original, actual);
     }
 
     @Test
-    public void happyListTest1(){
+    public void happyListTest1() {
         // Given
         ArrayList<String> original = new ArrayList<String>();
         original.add("getexcited");
@@ -167,12 +178,13 @@ public class ArrayListsTest {
         original.add("goingdown");
         // When
         boolean actual = arrayLists.happyList(original);
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         // Then
         Assert.assertTrue(actual);
     }
 
     @Test
-    public void happyListTest2(){
+    public void happyListTest2() {
         // Given
         ArrayList<String> original = new ArrayList<String>();
         original.add("yall");
@@ -182,33 +194,36 @@ public class ArrayListsTest {
         original.add("jawn");
         // When
         boolean actual = arrayLists.happyList(original);
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         // Then
         Assert.assertFalse(actual);
     }
 
     @Test
-    public void happyListTest3(){
+    public void happyListTest3() {
         // Given
         ArrayList<String> original = new ArrayList<String>();
         // When
         boolean actual = arrayLists.happyList(original);
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         // Then
         Assert.assertTrue(actual);
     }
 
     @Test
-    public void happyListTest4(){
+    public void happyListTest4() {
         // Given
         ArrayList<String> original = new ArrayList<String>();
         original.add("We got this!");
         // When
         boolean actual = arrayLists.happyList(original);
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         // Then
         Assert.assertTrue(actual);
     }
 
     @Test
-    public void happyListTest5(){
+    public void happyListTest5() {
         // Given
         ArrayList<String> original = new ArrayList<String>();
         original.add("Believe");
@@ -216,8 +231,35 @@ public class ArrayListsTest {
         original.add("Achieve!");
         // When
         boolean actual = arrayLists.happyList(original);
+        System.out.println("expected: " + original.toString() + " actual: " + actual);
         // Then
         Assert.assertFalse(actual);
+    }
+
+    public static void main(String[] args) {
+
+        ArrayListsTest obj = new ArrayListsTest();
+        obj.setup();
+
+        obj.addShitTest1();
+        obj.addShitTest2();
+        obj.addShitTest3();
+
+        obj.addShitTogetherTest1();
+        obj.addShitTogetherTest2();
+        obj.addShitTogetherTest3();
+
+        System.out.println(" \n Testing Remove: ");
+        obj.removeAllTest1();
+        obj.removeAllTest2();
+        obj.removeAllTest3();
+
+        obj.happyListTest1();
+        obj.happyListTest2();
+        obj.happyListTest3();
+        obj.happyListTest4();
+        obj.happyListTest5();
+
     }
 
 }
