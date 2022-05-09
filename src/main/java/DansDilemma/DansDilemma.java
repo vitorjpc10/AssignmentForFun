@@ -75,6 +75,57 @@ public class DansDilemma {
     }
 
     public Integer dilemmaOfN(Double... args) {
-        return null;
+        List<Double> argList = new ArrayList<Double>();
+        Set<Double> set = new HashSet<Double>();
+
+        for (Double arg : args) {
+            argList.add(arg);
+        }
+
+        //System.out.println("arglist:" + argList);
+
+        int arg1 = 0;
+
+        for (int j = 0; j < argList.size(); j++) {
+            for (int i = 0; i < argList.size(); i++) {
+
+                // System.out.println("initial: " + set);
+                // System.out.println("arg1 = " + argList.get(arg1) + " i is = " +
+                // argList.get(i));
+
+                if (arg1 == i) {
+                    //System.out.println("SKIPPED");
+                    continue; // skip
+                }
+
+                set.add(argList.get(arg1) * argList.get(i));
+                // System.out.println("multiplication: " + set);
+                // System.out.println("arg1 = " + argList.get(arg1) + " i is = " +
+                // argList.get(i));
+                set.add(argList.get(arg1) + argList.get(i));
+                // System.out.println("Addition: " + set);
+                // System.out.println("arg1 = " + argList.get(arg1) + " i is = " +
+                // argList.get(i));
+                set.add(argList.get(arg1) - argList.get(i));
+                // System.out.println("Subtraction: " + set);
+                // System.out.println("arg1 = " + argList.get(arg1) + " i is = " +
+                // argList.get(i));
+
+                if (argList.get(arg1) != 0 && argList.get(i) != 0) {
+
+                    set.add(argList.get(arg1) / argList.get(i));
+                    // System.out.println("Division: " + set);
+                    // System.out.println("arg1 = " + argList.get(arg1) + " i is = " +
+                    // argList.get(i));
+
+                }
+
+            }
+
+            arg1++;
+
+        }
+
+        return set.size();
     }
 }

@@ -199,10 +199,17 @@ public class DansDilemmaTests {
         // obj.dilemmaOfTwoDoubleTest3();
         // obj.dilemmaOfTwoDoubleTest4();
 
-        obj.dilemmaOfThreeDoubleTest1();
-        obj.dilemmaOfThreeDoubleTest2();
-        obj.dilemmaOfThreeDoubleTest3();
-        obj.dilemmaOfThreeDoubleTest4();
+        // obj.dilemmaOfThreeDoubleTest1();
+        // obj.dilemmaOfThreeDoubleTest2();
+        // obj.dilemmaOfThreeDoubleTest3();
+        // obj.dilemmaOfThreeDoubleTest4();
+
+        obj.dilemmaOfNTest1();
+        obj.dilemmaOfNTest2();
+        obj.dilemmaOfNTest3();
+        obj.dilemmaOfNTest4();
+        obj.dilemmaOfNTest5();
+       
 
     }
 
